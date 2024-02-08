@@ -12,4 +12,10 @@ router.post("/customerentry",async(req,res)=>{
 
 })
 
+router.get("/viewall",async(req,res)=>{
+    let data=await costomerModel.find()
+
+    res.json(data)
+})
+
 module.exports=router
